@@ -7,9 +7,9 @@ export default function AboutPage({ }) {
         <Stack style={{ width: '100%', height: '100%' }}>
             <PageHeader title="ABOUT" />
             <Stack align="center" spacing={0}>
-                <Image src="./babyPicture.jpeg" width={200} height={200} radius={100} styles={{ root: { marginBottom: -100 }, image: { border: '4px solid rgba(10, 10, 10, .6)' } }} />
+                <Image src="./professionalPicture.jpeg" width={260} height={260} radius={130} styles={{ root: { marginBottom: -130 }, image: { border: '4px solid rgba(10, 10, 10, .6)' } }} />
                 <Stack style={{ width: '80%', backgroundColor: 'rgba(255, 249, 219, .4)', border: '4px solid rgba(10, 10, 10, .6)' }}>
-                    <div style={{ color: 'black', padding: '120px 20px 20px' }}>
+                    <div style={{ color: 'black', padding: '150px 20px 20px' }}>
                         <Text>
                             My name is Nathaniel Jones and I am an industry-experienced, full-stack software developer with a
                             passion for creating React applications. I’ve spent the last three years working primarily with

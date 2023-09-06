@@ -8,7 +8,15 @@ const PROJECT_INFO = [
         description: 'This website!',
         image: './websiteProject.png',
         technologies: ['Typescript', 'React', 'NextJS', 'Mantine', 'Framer-Motion'],
-        link: ''
+        link: 'https://github.com/nat-jones/personal-website'
+    },
+    {
+        title: 'MITRE eCQM Projects',
+        description: 'A collection of open-source repositories I contributed to during my employment at The MITRE Corporation.',
+        image: './fqmTestify.png',
+        technologies: ['Typescript', 'Javascript', 'Ruby', 'React', 'Mantine', 'NextJS', 'MongoDB'],
+        link: 'https://github.com/projecttacoma'
+
     },
     {
         title: 'Pocket Pet',
@@ -21,16 +29,13 @@ const PROJECT_INFO = [
 
 export default function ProjectsPage({ }) {
     return (
-        <Stack style={{ width: '100%', height: '100%' }}>
+        <Stack align='stretch' justify='center' style={{ width: '100%', height: '100%' }}>
             <PageHeader title="PROJECTS" />
-            <Grid gutter={100} style={{ padding: 100 }}>
-                <Grid.Col span={6}>
-                    {PROJECT_INFO.map((e, i) => i % 2 === 0 && <ProjectCard {...PROJECT_INFO[i]} />)}
-                </Grid.Col>
-                <Grid.Col span={6}>
-                    {PROJECT_INFO.map((e, i) => i % 2 !== 0 && <ProjectCard {...PROJECT_INFO[i]} />)}
-                </Grid.Col>
-            </Grid>
+            <div style={{ overflow: 'scroll', width: '100%', padding: 40 }} >
+                <Grid gutter={40} style={{ width: '100%', margin: 0 }}>
+                    {PROJECT_INFO.map((pi) => (<Grid.Col span={6}><ProjectCard key={pi.title} {...pi} /></Grid.Col>))}
+                </Grid>
+            </div>
         </Stack>
     );
 }

@@ -23,9 +23,11 @@ export default function ProjectCard({ description, image, link, technologies, ti
                 </Text>
                 <Text lineClamp={1} fs='italic'>{`${technologies.join(', ')}`}</Text>
             </Stack>
-            <Button variant="outline" color="dark" fullWidth>
-                <Text>View</Text>
-            </Button>
+            <a href={link} target="_blank">
+                <Button variant="outline" color="dark" fullWidth>
+                    <Text>View</Text>
+                </Button>
+            </a>
         </Card>
     )
 }
