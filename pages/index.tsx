@@ -3,19 +3,20 @@ import Menu from '../components/Menu';
 import { useState } from 'react';
 import PageSelector from '../components/PageSelector';
 
-export interface PageInfoType {
-  page: 'about' | 'contact' | 'homepage' | 'projects' | 'technologies',
-  isExiting: boolean
-}
+export type PageInfoType =
+  | 'about'
+  | 'contact'
+  | 'homepage'
+  | 'projects'
+  | 'technologies';
 
 export default function HomePage() {
-
-  const [pageInfo, setPageInfo] = useState<PageInfoType>({ page: 'homepage', isExiting: false })
+  const [pageInfo, setPageInfo] = useState<PageInfoType>('homepage');
   return (
-    <BackgroundImage src='./surfing.jpeg'>
-      <Menu page={pageInfo.page} setPageInfo={setPageInfo}>
-        <PageSelector pageInfo={pageInfo} setPageInfo={setPageInfo} />
+    <BackgroundImage src="./images/surfing.jpeg">
+      <Menu page={pageInfo} setPageInfo={setPageInfo}>
+        <PageSelector pageInfo={pageInfo} />
       </Menu>
-    </BackgroundImage >
+    </BackgroundImage>
   );
 }
