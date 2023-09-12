@@ -1,13 +1,20 @@
-import { PageInfoType } from '../pages';
+import { Center, MantineTransition, Transition } from '@mantine/core';
+import { useState } from 'react';
+import { AllPagesType, ContentPagesType } from '../types';
 import AboutPage from './About';
 import ContactPage from './Contact';
 import TechnologiesPage from './TechnologyPage/Technologies';
-import { Center, MantineTransition, Transition } from '@mantine/core';
-import { useState } from 'react';
 import ProjectsPage from './Projects/ProjectsPage';
 
+const PAGES: Record<ContentPagesType, JSX.Element> = {
+  about: <AboutPage />,
+  contact: <ContactPage />,
+  technologies: <TechnologiesPage />,
+  projects: <ProjectsPage />,
+};
+
 interface PageSelectorProps {
-  pageInfo: PageInfoType;
+  pageInfo: AllPagesType;
 }
 
 const slideLeft: MantineTransition = {
@@ -29,86 +36,29 @@ export default function PageSelector({ pageInfo }: PageSelectorProps) {
         left: 204,
       }}
     >
-      <Transition
-        mounted={pageInfo === 'contact' && !isExiting}
-        onExited={() => setIsExiting(false)}
-        transition={slideLeft}
-        duration={1000}
-        timingFunction="ease"
-      >
-        {(styles) => (
-          <div
-            style={{
-              ...styles,
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-            }}
-          >
-            <ContactPage />
-          </div>
-        )}
-      </Transition>
-      <Transition
-        mounted={pageInfo === 'technologies' && !isExiting}
-        onExited={() => setIsExiting(false)}
-        transition={slideLeft}
-        duration={1000}
-        timingFunction="ease"
-      >
-        {(styles) => (
-          <div
-            style={{
-              ...styles,
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-            }}
-          >
-            <TechnologiesPage />
-          </div>
-        )}
-      </Transition>
-      <Transition
-        mounted={pageInfo === 'about' && !isExiting}
-        onExited={() => setIsExiting(false)}
-        transition={slideLeft}
-        duration={1000}
-        timingFunction="ease"
-      >
-        {(styles) => (
-          <div
-            style={{
-              ...styles,
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-            }}
-          >
-            <AboutPage />
-          </div>
-        )}
-      </Transition>
-      <Transition
-        mounted={pageInfo === 'projects' && !isExiting}
-        onExited={() => setIsExiting(false)}
-        transition={slideLeft}
-        duration={1000}
-        timingFunction="ease"
-      >
-        {(styles) => (
-          <div
-            style={{
-              ...styles,
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-            }}
-          >
-            <ProjectsPage />
-          </div>
-        )}
-      </Transition>
+      {(Object.keys(PAGES) as Array<ContentPagesType>).map((e) => (
+        <Transition
+          mounted={pageInfo === e && !isExiting}
+          onExited={() => setIsExiting(false)}
+          transition={slideLeft}
+          duration={1000}
+          timingFunction="ease"
+          key={e}
+        >
+          {(styles) => (
+            <div
+              style={{
+                ...styles,
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+              }}
+            >
+              {PAGES[e]}
+            </div>
+          )}
+        </Transition>
+      ))}
     </Center>
   );
 }

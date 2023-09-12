@@ -1,16 +1,9 @@
-import {
-  BackgroundImage,
-  Center,
-  Group,
-  Image,
-  Stack,
-  Text
-} from '@mantine/core';
+import { BackgroundImage, Center, Group, Image, Stack } from '@mantine/core';
 import {
   Mail,
   BrandGithub,
   BrandLinkedin,
-  BrandInstagram
+  BrandInstagram,
 } from 'tabler-icons-react';
 import PageHeader from './util/PageHeader';
 
@@ -39,7 +32,7 @@ export default function ContactPage() {
             style={{
               height: CARD_HEIGHT,
               width: CARD_HEIGHT * CARD_ASPECT_RATIO,
-              padding: '60px'
+              padding: '60px',
             }}
           >
             <Stack align="left" justify="space-around">

@@ -1,11 +1,11 @@
 import { Center, Stack } from '@mantine/core';
 import { motion } from 'framer-motion';
 import HomepageLink from './HomepageLink';
-import { PageInfoType } from '../pages';
+import { AllPagesType } from '../types';
 
 interface MenuProps {
   page: string;
-  setPageInfo: (value: React.SetStateAction<PageInfoType>) => void;
+  setPageInfo: (value: React.SetStateAction<AllPagesType>) => void;
   children?: JSX.Element | JSX.Element[];
 }
 

@@ -10,7 +10,7 @@ const LANGUAGE_DATA = {
   'HTML/CSS': 3,
   Ruby: 2,
   Java: 2,
-  C: 1
+  C: 1,
 };
 
 const FRAMEWORK_DATA = {
@@ -21,38 +21,38 @@ const FRAMEWORK_DATA = {
   ReactNative: 2,
   MaterialUI: 2,
   Expo: 2,
-  'Framer-Motion': 2
+  'Framer-Motion': 2,
 };
 
 const DATABASE_DATA = {
   MongoDB: 3,
   'Google Firebase': 2,
-  SQLite: 1
+  SQLite: 1,
 };
 
 const MISC_DATA = {
   Git: 4,
-  Docker: 1
+  Docker: 1,
 };
 
 export default function TechnologiesPage() {
   return (
     <Stack style={{ height: '100%', width: '100%' }}>
-      <PageHeader title={'TECHNOLOGIES'} />
+      <PageHeader title="TECHNOLOGIES" />
       <div
         style={{
           height: '100%',
           width: '100%',
           justifyContent: 'space-between',
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
         }}
       >
         <Group
           style={{
             justifyContent: 'space-evenly',
             alignItems: 'flex-start',
-            width: '100%'
+            width: '100%',
           }}
         >
           <TechnologyPanel data={LANGUAGE_DATA} label="Languages" />
@@ -65,7 +65,7 @@ export default function TechnologiesPage() {
             borderTop: '4px solid rgba(10, 10, 10, .6)',
             backgroundColor: 'rgba(255, 249, 219, .4)',
             color: 'black',
-            padding: 20
+            padding: 20,
           }}
         >
           <Group>

@@ -8,7 +8,7 @@ interface TechnologyPanelProps {
 
 export default function TechnologyPanel({ data, label }: TechnologyPanelProps) {
   return (
-    <Stack sx={(theme) => ({ width: '20%', height: 400 })}>
+    <Stack style={{ width: '20%', height: 400 }}>
       <Text size={28}>{label}</Text>
       {Object.keys(data).map((e) => (
         <Group

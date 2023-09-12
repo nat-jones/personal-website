@@ -13,7 +13,7 @@ export default function HomepageLink({
   href,
   text,
   setPage,
-  selected
+  selected,
 }: HomepageLinkProps) {
   const [isHover, setIsHover] = useState(false);
 
@@ -28,9 +28,10 @@ export default function HomepageLink({
       style={{
         textDecoration: 'none',
         opacity: selected || isHover ? 1 : 0.5,
-        width: '100%'
+        width: '100%',
       }}
       href={href}
+      passHref
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

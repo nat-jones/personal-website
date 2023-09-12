@@ -1,17 +1,11 @@
 import { BackgroundImage } from '@mantine/core';
-import Menu from '../components/Menu';
 import { useState } from 'react';
+import Menu from '../components/Menu';
 import PageSelector from '../components/PageSelector';
-
-export type PageInfoType =
-  | 'about'
-  | 'contact'
-  | 'homepage'
-  | 'projects'
-  | 'technologies';
+import { AllPagesType } from '../types';
 
 export default function HomePage() {
-  const [pageInfo, setPageInfo] = useState<PageInfoType>('homepage');
+  const [pageInfo, setPageInfo] = useState<AllPagesType>('homepage');
   return (
     <BackgroundImage src="./images/surfing.jpeg">
       <Menu page={pageInfo} setPageInfo={setPageInfo}>

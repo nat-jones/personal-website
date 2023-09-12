@@ -1,7 +1,7 @@
-import { Center, Image, Space, Stack, Text } from '@mantine/core';
+import { Image, Space, Stack, Text } from '@mantine/core';
 import PageHeader from './util/PageHeader';
 
-export default function AboutPage({}) {
+export default function AboutPage() {
   return (
     <Stack style={{ width: '100%', height: '100%' }}>
       <PageHeader title="ABOUT" />
@@ -13,14 +13,14 @@ export default function AboutPage({}) {
           radius={130}
           styles={{
             root: { marginBottom: -130 },
-            image: { border: '4px solid rgba(10, 10, 10, .6)' }
+            image: { border: '4px solid rgba(10, 10, 10, .6)' },
           }}
         />
         <Stack
           style={{
             width: '80%',
             backgroundColor: 'rgba(255, 249, 219, .4)',
-            border: '4px solid rgba(10, 10, 10, .6)'
+            border: '4px solid rgba(10, 10, 10, .6)',
           }}
         >
           <div style={{ color: 'black', padding: '150px 20px 20px' }}>
@@ -49,9 +49,9 @@ export default function AboutPage({}) {
             <Space h="lg" />
             <Text>
               Recently, I left MITRE to volunteer with exotic and endangered
-              animals, and explore freelance software development. I've been
-              most interested in contributing to projects that are working to
-              fight climate change and promote animal wellfare.
+              animals, and explore freelance software development. I&apos;ve
+              been most interested in contributing to projects that are working
+              to fight climate change and promote animal wellfare.
             </Text>
           </div>
         </Stack>
