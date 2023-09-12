@@ -37,7 +37,14 @@ const navBar = {
 export default function Menu({ children, page, setPageInfo }: MenuProps) {
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
-      <Center style={{ width: '100vw', height: '100vh', position: 'absolute' }}>
+      <Center
+        style={{
+          width: '100vw',
+          height: '100vh',
+          position: 'absolute',
+          overflow: 'hidden',
+        }}
+      >
         <motion.div
           animate={page === 'homepage' ? page : 'other'}
           variants={navBar}
