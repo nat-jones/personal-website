@@ -8,15 +8,10 @@ import Head from 'next/head';
 export default function HomePage() {
   const [pageInfo, setPageInfo] = useState<AllPagesType>('homepage');
   return (
-    <>
-      <Head>
-        <link rel="preload" href="./images/surfing.jpeg" as="image" />
-      </Head>
-      <BackgroundImage src="./images/surfing.jpeg">
-        <Menu page={pageInfo} setPageInfo={setPageInfo}>
-          <PageSelector pageInfo={pageInfo} />
-        </Menu>
-      </BackgroundImage>
-    </>
+    <BackgroundImage src="./images/surfing.jpeg">
+      <Menu page={pageInfo} setPageInfo={setPageInfo}>
+        <PageSelector pageInfo={pageInfo} />
+      </Menu>
+    </BackgroundImage>
   );
 }
