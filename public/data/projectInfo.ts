@@ -12,7 +12,7 @@ export const PROJECT_INFO: ProjectInfo[] = [
     description: 'This website!',
     image: './images/websiteProject.png',
     technologies: ['Typescript', 'React', 'NextJS', 'Mantine', 'Framer-Motion'],
-    link: 'https://github.com/nat-jones/personal-website'
+    link: 'https://github.com/nat-jones/personal-website',
   },
   {
     title: 'MITRE eCQM Projects',
@@ -26,9 +26,9 @@ export const PROJECT_INFO: ProjectInfo[] = [
       'React',
       'Mantine',
       'NextJS',
-      'MongoDB'
+      'MongoDB',
     ],
-    link: 'https://github.com/projecttacoma'
+    link: 'https://github.com/projecttacoma',
   },
   {
     title: 'Pocket Pet',
@@ -36,6 +36,6 @@ export const PROJECT_INFO: ProjectInfo[] = [
       'My UMass Honors College thesis project. A virtual pet app that raises money for shelter animals through passive ad revenue.',
     image: './images/pocketPet.png',
     technologies: ['Javascript', 'ReactNative', 'Firebase', 'Expo'],
-    link: ''
-  }
+    link: 'https://github.com/nat-jones/pet-project',
+  },
 ];
