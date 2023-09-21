@@ -9,14 +9,14 @@ export default function StarMeter({ num }: { num: number }) {
           return (
             <Star
               key={e}
-              size={24}
+              size={20}
               strokeWidth={1}
               color="black"
               fill="#FFF3BF"
             />
           );
         }
-        return <Star key={e} size={24} strokeWidth={1} color="black" />;
+        return <Star key={e} size={20} strokeWidth={1} color="black" />;
       })}
     </div>
   );

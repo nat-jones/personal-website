@@ -8,7 +8,7 @@ import {
 import PageHeader from './util/PageHeader';
 
 const CARD_ASPECT_RATIO = 1.75;
-const CARD_HEIGHT = 340;
+const CARD_HEIGHT = 300;
 const CARD_TEXT_COLOR = '#A9884F';
 
 export default function ContactPage() {
@@ -44,54 +44,74 @@ export default function ContactPage() {
                 />
                 <a
                   href="https://github.com/nat-jones"
-                  style={{ color: CARD_TEXT_COLOR, textDecoration: 'none' }}
+                  style={{
+                    color: CARD_TEXT_COLOR,
+                    textDecoration: 'none',
+                    fontSize: 14,
+                  }}
                 >
                   nat-jones
                 </a>
               </Group>
               <Group position="center">
                 <BrandGithub
-                  size={24}
+                  size={20}
                   strokeWidth={2}
                   color={CARD_TEXT_COLOR}
                 />
                 <a
                   href="https://github.com/natjoe4"
-                  style={{ color: CARD_TEXT_COLOR, textDecoration: 'none' }}
+                  style={{
+                    color: CARD_TEXT_COLOR,
+                    textDecoration: 'none',
+                    fontSize: 14,
+                  }}
                 >
                   natjoe4
                 </a>
               </Group>
               <Group position="center">
                 <BrandLinkedin
-                  size={24}
+                  size={20}
                   strokeWidth={2}
                   color={CARD_TEXT_COLOR}
                 />
                 <a
                   href="https://www.linkedin.com/in/nathaniel-jones-00a92b163/"
-                  style={{ color: CARD_TEXT_COLOR, textDecoration: 'none' }}
+                  style={{
+                    color: CARD_TEXT_COLOR,
+                    textDecoration: 'none',
+                    fontSize: 14,
+                  }}
                 >
                   Nathaniel Jones
                 </a>
               </Group>
               <Group position="center">
                 <BrandInstagram
-                  size={24}
+                  size={20}
                   strokeWidth={2}
                   color={CARD_TEXT_COLOR}
                 />
                 <a
                   href="https://www.instagram.com/nathanieljones_/"
-                  style={{ color: CARD_TEXT_COLOR, textDecoration: 'none' }}
+                  style={{
+                    color: CARD_TEXT_COLOR,
+                    textDecoration: 'none',
+                    fontSize: 14,
+                  }}
                 >
                   nathanieljones_
                 </a>
               </Group>
               <Group position="center">
-                <Mail size={24} strokeWidth={2} color={CARD_TEXT_COLOR} />
+                <Mail size={20} strokeWidth={2} color={CARD_TEXT_COLOR} />
                 <a
-                  style={{ color: CARD_TEXT_COLOR, textDecoration: 'none' }}
+                  style={{
+                    color: CARD_TEXT_COLOR,
+                    textDecoration: 'none',
+                    fontSize: 14,
+                  }}
                   href="#"
                   onClick={(e) => {
                     window.location.href =

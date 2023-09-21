@@ -71,9 +71,9 @@ export default function TechnologiesPage() {
           <Group>
             <Group>
               <StarMeter num={4} />
-              <Text size={18}> = </Text>
+              <Text size={14}> = </Text>
             </Group>
-            <Text size={18}>
+            <Text size={14}>
               Multiple years of industry experience. Comfortable completing any
               task and teaching others.
             </Text>
@@ -81,9 +81,9 @@ export default function TechnologiesPage() {
           <Group>
             <Group>
               <StarMeter num={3} />
-              <Text size={18}> = </Text>
+              <Text size={14}> = </Text>
             </Group>
-            <Text size={18}>
+            <Text size={14}>
               About 1 year of industry experience. Comfortable completing any
               task.
             </Text>
@@ -91,9 +91,9 @@ export default function TechnologiesPage() {
           <Group>
             <Group>
               <StarMeter num={2} />
-              <Text size={18}> = </Text>
+              <Text size={16}> = </Text>
             </Group>
-            <Text size={18}>
+            <Text size={14}>
               Some industry experience. Comfortable completing most tasks while
               referencing documentation.
             </Text>
@@ -101,9 +101,9 @@ export default function TechnologiesPage() {
           <Group>
             <Group>
               <StarMeter num={1} />
-              <Text size={18}> = </Text>
+              <Text size={14}> = </Text>
             </Group>
-            <Text size={18}>
+            <Text size={14}>
               Limited experience in either industry or personal project. Can
               complete tasks while heavily referencing documentation.
             </Text>

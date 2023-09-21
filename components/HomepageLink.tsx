@@ -38,7 +38,7 @@ export default function HomepageLink({
       <Text
         ta="center"
         color="black"
-        fz="lg"
+        fz="sm"
         onClick={() => setPage && setPage()}
       >
         {text}
